@@ -18,7 +18,10 @@ public class App extends JFrame{
         
     }
 
+    
     private void initUI(){
+        Calc calcString = new Calc();
+
         ArrayList<JComponent> buttonList = new ArrayList<JComponent>();
 
         JButton button = new JButton("Quit");
@@ -26,7 +29,7 @@ public class App extends JFrame{
         buttonList.add(button);
 
         JButton button2 = new JButton("STOP");
-        button2.addActionListener((Event) -> System.out.println("HI"));
+        button2.addActionListener((Event) -> calcString.setCalcString(""));
         buttonList.add(button2);
 
         createLayout(button, button2);
